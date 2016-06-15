@@ -39,7 +39,7 @@ class MyNet( Topo ):
 
 
 
-
+"""
 if __name__ == '__main__':
     # Tell mininet to print useful information
     setLogLevel('info')
@@ -57,5 +57,5 @@ if __name__ == '__main__':
     print "Testing network connectivity"
     net.pingAll()
 
-
-#topos = { 'MyNet': ( lambda: MyNet() ) }
+"""
+topos = { 'MyNet': ( lambda: MyNet() ) }
