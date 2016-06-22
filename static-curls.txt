@@ -1,0 +1,11 @@
+#AUN NO FUNCIONA
+#FLOW 1
+curl -X POST -d '{"switch": "00:00:00:00:00:01", "name":"flow-mod-1-1", "cookie":"0", "priority":"32768", "in_port":"1","active":"true", "actions":"output=2"}' http://192.168.56.101:8080/wm/staticflowpusher/json
+curl -X POST -d '{"switch": "00:00:00:00:00:02", "name":"flow-mod-1-2", "cookie":"0", "priority":"32768", "in_port":"2","active":"true", "actions":"output=3"}' http://192.168.56.101:8080/wm/staticflowpusher/json
+curl -X POST -d '{"switch": "00:00:00:00:00:03", "name":"flow-mod-1-3", "cookie":"0", "priority":"32768", "in_port":"2","active":"true", "actions":"output=1"}' http://192.168.56.101:8080/wm/staticflowpusher/json
+
+#show flows
+curl http://192.168.56.101:8080/wm/staticflowpusher/list/all/json
+
+#clear flows
+curl http://192.168.56.101:8080/wm/staticflowpusher/clear/all/json
